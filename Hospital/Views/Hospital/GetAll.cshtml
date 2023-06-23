@@ -1,0 +1,41 @@
+﻿@model ML.Paciente
+@{
+    ViewBag.Title = "GetAll";
+    Layout = "~/Views/_ViewStart.cshtml";
+}
+
+<h2>GetAll</h2>
+<br />
+<div>
+    <table>
+        <thead>
+            <tr>
+                <td>IdPaciente</td>
+                <td>Nombre</td>
+                <td>ApellidoPaterno</td>
+                <td>ApellidoMaterno</td>
+                <td>FechaNacimiento</td>
+                <td>FechaIngreso</td>
+                <td>Sexo</td>
+                <td>Sintomas</td>
+                <td>Tipo Sangre</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(ML.Paciente paciente in Model.Pacientes)
+            {
+                <tr>
+                    <td>@paciente.IdPaciente</td>
+                    <td>@paciente.Nombre</td>
+                    <td>@paciente.ApellidoPaterno</td>
+                    <td>@paciente.ApellidoMaterno</td>
+                    <td>@paciente.FechaNacimeinto</td>
+                    <td>@paciente.FechaIngreso</td>
+                    <td>@paciente.Sexo</td>
+                    <td>@paciente.Sintomas</td>
+                    <td>@paciente.TipoSangre</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
